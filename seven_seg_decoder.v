@@ -4,9 +4,9 @@ module seven_seg_decoder(
     input [3:0] AplusB,
     input [3:0] AminusB,
     input [3:0] anode,
-    output reg selected_sig,
     output reg [6:0] segs
 );
+    reg [3:0] selected_sig;
 
     always @(*) begin
         case(anode)
